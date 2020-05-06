@@ -4,6 +4,8 @@ import TestClass from './App'
 import './index.css';
 import Myclass from './Method'
 import Clock from './Clock'
+import MyEvents from './Events'
+
 // import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
@@ -22,7 +24,9 @@ ReactDOM.render(
     {/* <TestClass link="www.google.com" linkText="google"/>
     <TestClass link="www.fb.com" linkText="facebook"/>
      <Myclass /> */}
-     <Clock />
+     {/* <Clock /> */}
+
+<MyEvents/>
   </div>,
     document.getElementById('root')
   );
