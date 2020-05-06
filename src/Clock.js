@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import DigitalClock from './DigitalClock'
+import AnalogClock from './AnalogClock'
 //Two types of Componenet
 //Stateful 
 //Stateless
@@ -27,8 +28,12 @@ updateTime(){
     render(){
         return(
             // <h1>{this.state.currentTime}</h1>
-            <DigitalClock time={this.state.currentTime}/>
-        )
+            <div>
+     <DigitalClock time={this.state.currentTime}/>
+        <AnalogClock time={this.state.currentTime}/>
+            </div>
+       
+            )
     }
 }
 
