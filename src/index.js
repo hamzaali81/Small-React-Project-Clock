@@ -19,9 +19,9 @@ import Clock from './Clock'
 
 ReactDOM.render(
   <div>
-    <TestClass link="www.google.com" linkText="google"/>
+    {/* <TestClass link="www.google.com" linkText="google"/>
     <TestClass link="www.fb.com" linkText="facebook"/>
-     <Myclass />
+     <Myclass /> */}
      <Clock />
   </div>,
     document.getElementById('root')
