@@ -28,7 +28,11 @@ componentWillUpdate(nextprops,nextState){
     console.log('Next State', nextState);    
 }
 
-
+componentDidUpdate(oldProps,oldState){
+    console.log('component Did update');
+    console.log('Old props', oldProps);
+    console.log('old state', oldState);   
+}
 
     render(){
         console.log('render method')
