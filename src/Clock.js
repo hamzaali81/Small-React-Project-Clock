@@ -34,8 +34,11 @@ updateTime(){
             <div>
      {/* <DigitalClock time={this.state.currentTime}/>
         <AnalogClock time={this.state.currentTime}/> */}
-
-        <Logger time={this.state.currentTime}/>
+{ (this.state.counter < 2)?
+    (<Logger time={this.state.currentTime}/>):
+(<div></div>)
+}
+        {/* <Logger time={this.state.currentTime}/> */}
             </div>
        
             )
