@@ -14,11 +14,14 @@ class Forms extends Component{
             checkboxGroup:{
                      mongodb: false,
                      express:true
-            }
+            },
+            selectedValue: 'Node'
         }
         this.formHandler=this.formHandler.bind(this);
     this.clickHandler=this.clickHandler.bind(this);
-this.radioHandler=this.radioHandler.bind(this);    
+this.radioHandler=this.radioHandler.bind(this);
+this.checkboxHandler=this.checkboxHandler.bind(this);
+this.selectHandler=this.selectHandler.bind(this);    
 }
     
     formHandler(ev){
@@ -58,7 +61,22 @@ this.setState({
 })
 }
 
+checkboxHandler(ev){
+console.log(ev.target.value)
+let checkboxGroup=this.state.checkboxGroup;
+checkboxGroup[ev.target.value]=ev.target.checked;
+this.setState({
+    checkboxGroup: checkboxGroup
+})
 
+
+}
+
+selectHandler(ev){
+this.setState({
+    selectedValue: ev.target.value
+})
+}
 
 
 
@@ -83,14 +101,18 @@ Developer Category
 Technologies Category
 <br/>
 <label>
-    Mongodb<input type="checkbox" name="tech" value="mongodb" checked={this.state.radioGroup['Meanstack']} onChange={this.radioHandler}/>
+    Mongodb<input type="checkbox" name="tech" value="mongodb" checked={this.state.checkboxGroup['mongodb']} onChange={this.checkboxHandler}/>
 </label>
 <br/>
 <label>
-    Express <input type="checkbox" name="tech" value="express" checked={this.state.radioGroup['Mernstack']} onChange={this.radioHandler}/>
+    Express <input type="checkbox" name="tech" value="express" checked={this.state.checkboxGroup['express']} onChange={this.checkboxHandler}/>
 </label>
 
-
+<select value="this.state.selectedValue" onChange={this.selectHandler}>
+<option value="ruby">Ruby</option>
+<option value="python">Python</option>
+<option value="rust">Rust</option>
+</select>
 
 </div>
         )
