@@ -10,6 +10,10 @@ class Forms extends Component{
             radioGroup:{
                 MEANSTACK: false,
                 MERNSTACK: true
+            },
+            checkboxGroup:{
+                     mongodb: false,
+                     express:true
             }
         }
         this.formHandler=this.formHandler.bind(this);
@@ -69,12 +73,24 @@ this.setState({
 Developer Category
 <br/>
 <label>
-    Mean stack<input type="radio" name="deveCategory" value="Meanstack" checked={this.state.radioGroup['MEANSTACK']} onChange={this.radioHandler}/>
+    Mean stack<input type="radio" name="deveCategory" value="Meanstack" checked={this.state.radioGroup['Meanstack']} onChange={this.radioHandler}/>
 </label>
 <br/>
 <label>
-    Mern Stack <input type="radio" name="deveCategory" value="Mernstack" checked={this.state.radioGroup['MERNSTACK']} onChange={this.radioHandler}/>
+    Mern Stack <input type="radio" name="deveCategory" value="Mernstack" checked={this.state.radioGroup['Mernstack']} onChange={this.radioHandler}/>
 </label>
+
+Technologies Category
+<br/>
+<label>
+    Mongodb<input type="checkbox" name="tech" value="mongodb" checked={this.state.radioGroup['Meanstack']} onChange={this.radioHandler}/>
+</label>
+<br/>
+<label>
+    Express <input type="checkbox" name="tech" value="express" checked={this.state.radioGroup['Mernstack']} onChange={this.radioHandler}/>
+</label>
+
+
 
 </div>
         )
