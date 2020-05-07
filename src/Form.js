@@ -22,6 +22,7 @@ class Forms extends Component{
 this.radioHandler=this.radioHandler.bind(this);
 this.checkboxHandler=this.checkboxHandler.bind(this);
 this.selectHandler=this.selectHandler.bind(this);    
+this.emailHandler=this.emailHandler.bind(this);
 }
     
     formHandler(ev){
@@ -78,7 +79,9 @@ this.setState({
 })
 }
 
-
+emailHandler(ev){
+    console.log(this.refs.subscriberEmail.value)
+}
 
     render(){
         return(
@@ -87,6 +90,12 @@ this.setState({
     <input type="text" name="username" value={this.state.username} onChange={this.formHandler} />
  <button onClick={this.clickHandler}>Save users</button>
     <p>{this.state.username}</p>
+<br/>
+<label>
+    Email: <input type="email" ref='subscriberEmail'/>
+</label>
+<button onClick={this.emailHandler}>Subscription</button>
+
 <br/>
 Developer Category
 <br/>
