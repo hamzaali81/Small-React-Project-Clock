@@ -5,6 +5,7 @@ import './index.css';
 import Myclass from './Method'
 import Clock from './Clock'
 import MyEvents from './Events'
+import Forms from './Form'
 
 // import App from './App';
 // import * as serviceWorker from './serviceWorker';
@@ -25,8 +26,8 @@ ReactDOM.render(
     <TestClass link="www.fb.com" linkText="facebook"/>
      <Myclass /> */}
      {/* <Clock /> */}
-
-<MyEvents/>
+<Forms />
+{/* <MyEvents/> */}
   </div>,
     document.getElementById('root')
   );
